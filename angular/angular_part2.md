@@ -16,10 +16,10 @@ não funciona, troque por ([fonte](https://stackoverflow.com/questions/62228834/
 app.component
 <div>
   <jad-header></jad-header>
-  <jad-student name="luke" [isJedi]="true"></jad-student>
-  <jad-student name="han solo" [isJedi]="false"></jad-student>
-  <jad-student name="leia" [isJedi]="false"></jad-student>
-  <jad-student name="yoda" [isJedi]="true"></jad-student>
+  <jad-student name="luke" [isJedi]:"true"></jad-student>
+  <jad-student name="han solo" [isJedi]:"false"></jad-student>
+  <jad-student name="leia" [isJedi]:"false"></jad-student>
+  <jad-student name="yoda" [isJedi]:"true"></jad-student>
 
 </div>
 ```
