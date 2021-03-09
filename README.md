@@ -18,6 +18,14 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
  
  1. [Comandos básicos](https://github.com/NatSatie/notasDeAula/blob/main/git.md)
 
+## Minhas dúvidas e erros comuns 🙋
+ 
+(Em breve)
+
+## Referências 🔖
+
+ 1. [Blog Overreacted, página pessoal do Dan Abramov, criador do React](https://overreacted.io/)
+
 ## MC504: Sistemas Operacionais
 
 (Em breve)
