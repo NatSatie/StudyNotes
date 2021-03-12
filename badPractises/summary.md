@@ -10,8 +10,8 @@ Comecei a trabalhar no meu primeiro emprego como estagiária. Resolver problemas
  - (Bônus) competições de Programação
  
 ### Sumário 🔖
-1. Uso de IFs
-2. Chamar valores undefined e null
+1. [Uso de IFs](https://github.com/NatSatie/TechNotes/blob/main/badPractises/part1.md)
+2. [Chamar valores undefined e null](https://github.com/NatSatie/TechNotes/blob/main/badPractises/part2.md)
 3. Returns desnecessários
 
 > Written with [StackEdit](https://stackedit.io/).
