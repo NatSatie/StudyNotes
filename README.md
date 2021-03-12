@@ -20,8 +20,10 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 
 ## Minhas dúvidas e erros comuns 🙋
  
-(Em breve)
-
+ 1. [Apresentação](https://github.com/NatSatie/TechNotes/blob/main/badPractises/summary.md)
+ 2. [Uso de IFs](https://github.com/NatSatie/TechNotes/blob/main/badPractises/part1.md)
+ 3. [Chamar valores undefined e null](https://github.com/NatSatie/TechNotes/blob/main/badPractises/part2.md)
+ 
 ## Referências 🔖
 
  1. [Blog Overreacted, página pessoal do Dan Abramov, criador do React](https://overreacted.io/)
