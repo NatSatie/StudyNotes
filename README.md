@@ -18,7 +18,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
  
  1. [Comandos básicos](https://github.com/NatSatie/notasDeAula/blob/main/git.md)
 
-## Prássimas práticas 🙋
+## Péssimas práticas 🙋
  
  1. [Apresentação](https://github.com/NatSatie/TechNotes/blob/main/badPractises/summary.md)
  2. [Uso de IFs](https://github.com/NatSatie/TechNotes/blob/main/badPractises/part1.md)
