@@ -29,6 +29,10 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
   
  1. [Princípios, Observables, Promises](https://github.com/NatSatie/notasDeAula/blob/main/RxJS.md)
  
+## SQL: Exercícios do CodeSignal 📊
+
+ 1. [Fundamentos do SQL](https://github.com/NatSatie/StudyNotes/blob/main/sql/part1.md)
+
 ## Referências 🔖
 
  1. [Blog Overreacted, página pessoal do Dan Abramov, criador do React](https://overreacted.io/)
