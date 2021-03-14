@@ -14,7 +14,14 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 ## Git 🐙
  
  1. [Comandos básicos](https://github.com/NatSatie/notasDeAula/blob/main/git.md)
- 
+
+## Programando na Prática 💻
+
+ - [Codecademy](https://www.codecademy.com/)
+ - [CodeSignal](https://app.codesignal.com/arcade)
+ - [Codewars](https://www.codewars.com/)
+ - [CSSBatlle](https://cssbattle.dev/)
+
 ## Péssimas práticas 🙋
  
  1. [Apresentação](https://github.com/NatSatie/TechNotes/blob/main/badPractises/summary.md)
