@@ -8,8 +8,8 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 
 ## Disciplinas UNICAMP
 
-### Sistemas Operacionais
-(Em breve)
+ - [Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
+ - Sistemas Operacionais (em breve)
 
 ## Git 🐙
  
