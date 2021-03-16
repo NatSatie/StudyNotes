@@ -5,6 +5,7 @@
 ## Parte 1: Análise Lexical
  1. [Introdução](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/Intro.md)
  2. [Tokens](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part1.md)
+ 3. [Regex](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part2.md)
 ## Parte 2: Análise Sintática
 
 ## Parte 3: Análise Semântica
