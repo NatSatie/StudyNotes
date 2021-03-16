@@ -3,6 +3,7 @@
 ### Referências 👀
 [Stack Frame Layouts](http://shio2.k.hosei.ac.jp/ntro/)
 DEVto [Generic Compiler Toolchain](https://dev.to/matthewchrobak/generic-compiler-toolchain-4ej7)
+TutorialsPoint [Compilers Design](https://www.tutorialspoint.com/compiler_design/index.htm)
 Youtube: [Parsing](https://youtu.be/r6vNthpQtSI)
 Youtube: [Comparing C to machine language](https://youtu.be/yOyaJXpAYZQ)
 Youtube: [How a compiler works in 1 minute](https://youtu.be/IhC7sdYe-Jg)
@@ -32,7 +33,7 @@ Após a divisão de tokens, precisamos dividir os tokens em uma árvore camada p
 
 ### Transformando em linguagem de máquina
 
-O que tudo isso significa? Não sei bem (Ainda)🙍‍♀️
+Esses são os passos dados dentro do livro:
 
 **Frame Layout** (Capítulo 6) é uma parte que vai definir variáveis, parâmetros, em pilhas (activation records ou stack frames) e tranforma essas variáveis em uma forma compreensível para o computador (machine language)[referência](http://shio2.k.hosei.ac.jp/ntro/).
 **Tradução** (Capítulo 7) produz intermediate representation trees (IR trees), porém no livro não é entregue detalhes sobre a importância do passo.
@@ -42,5 +43,9 @@ O que tudo isso significa? Não sei bem (Ainda)🙍‍♀️
 **Dataflow Analysis** (Capítulo 10): Coleta informações sobre o fluxo de dados das variáveis.
 **Register Allocation** (Capítulo 11): Escolhe certos registradores para armazenar variáveis, e valores temporários para cada programa.
 **Code Emission** (Capítulo 12): Substitui os nomes temporários de cada instrução de máquina com os registradores da máquina.
+
+Observando a imagem no Tutorial Point compiler Designer, 
+
+![Compiler Design - Phases of Compiler](https://www.tutorialspoint.com/compiler_design/images/compiler_phases.jpg)
 
 > Written with [StackEdit](https://stackedit.io/).
