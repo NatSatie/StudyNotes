@@ -29,7 +29,7 @@ Com duas expressões regulares `M` e `N`, usando o operador de concatenação (p
  
 ### Epsilon
 
-Representa a linguagem cuja única string é vazia. `(a · b) |` ![{\displaystyle \in }](https://en.wikipedia.org/api/rest_v1/media/math/render/svg/6fe4d5b0a594c1da89b5e78e7dfbeed90bdcc32f)    `= {"", "ab"}`; ![{\displaystyle \in }](https://en.wikipedia.org/api/rest_v1/media/math/render/svg/6fe4d5b0a594c1da89b5e78e7dfbeed90bdcc32f) `= {""}`.
+Representa a linguagem cuja única string é vazia. `(a · b) |` $\in$    `= {"", "ab"}`;  $\in$`= {""}`.
 
 ### Repetição
 
@@ -38,6 +38,37 @@ Dada uma expressão regular `M` com asterisco `M*` , ela é a concatenação de 
 ### Outros
 Temos várias outras anotações de como podemos criar uma expressão regular.
 
+## Conhecendo mais sobre Regex
+Regex não é usado apenas para a partição de tokens, podemos usar em buscas com Javascript, Python e outros! Como mostra nesse vídeo: [Regular Expressions (RegEx) in 100 Seconds](https://fireship.io/lessons/regex-cheat-sheet-js/)
+
+Temos outros guias como [Regex Quick Start](https://www.rexegg.com/regex-quickstart.html), [Coding Train Regular Expressions](https://youtu.be/7DG3kCDx53c). E para treinar temos [Regex 101](https://regex101.com/)
+
+![Fireship Regex gif guide](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/img/regex_fireship.gif)
+
+
 ## Exemplos de Regex
+
+### Parte 1
+
+ - IF: `if`
+ - ID: `[a-z][a-z0-9]*`, isso significa que aceita que o primeiro caractere seja uma letra alfabética e as próximas sejam caracteres numéricos ou alfabéticos, independente de quantas vezes apareçam.
+ - NUM: `[0-9]*` é um número qualquer
+ 
+### Parte 2
+
+*Obs: Na aula que assisti tinha outras representações e adaptei para o regex moderno.
+
+ - `[0-9]+` Aceita mais de um valor numérico (one or more )
+ - `[0-9]*` Aceita nenhum valor ou mais de um valor numérico (Matches zero or more consecutive `a` characters )
+ - `[0-9]+[.][0-9]*` isto é uma concatenação das duas expressões acima (Exemplos: 49.9, 85.)
+ - `[0-9]*[.][0-9]+` isto é uma concatenação das duas expressões acima (Exemplos: .004545, 45.445)
+ - `([0-9]+[.][0-9]*)|([0-9]*[.][0-9]+)` isto é uma alternação entre os dois termos. **Representação alternativa**: `([0-9]+"."[0-9]*)|([0-9]*"."[0-9]+)`
+
+## Dilemas do Analisador Lexicográfico
+
+Como saber se um token é um ID ou uma palavra reservada? Podemos resolver com as seguintes regras:
+
+ 1. Longest Match: A maior substring do input que encaixa em uma expressão regular será considerada o próximo token
+ 2.  Rule Priority: Dado uma substring inicial em particular, a primeira expressão regular que encaixa determina o tipo de token. Isso significa que a ordem da escrita das expressões regulares importam.
 
 > Written with [StackEdit](https://stackedit.io/).
