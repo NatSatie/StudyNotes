@@ -63,6 +63,7 @@ Temos outros guias como [Regex Quick Start](https://www.rexegg.com/regex-quickst
  - `[0-9]+[.][0-9]*` isto é uma concatenação das duas expressões acima (Exemplos: 49.9, 85.)
  - `[0-9]*[.][0-9]+` isto é uma concatenação das duas expressões acima (Exemplos: .004545, 45.445)
  - `([0-9]+[.][0-9]*)|([0-9]*[.][0-9]+)` isto é uma alternação entre os dois termos. **Representação alternativa**: `([0-9]+"."[0-9]*)|([0-9]*"."[0-9]+)`
+ - Para **caracteres especiais** usamos `\?`, `\*`, `\+` e assim vai.
 
 ## Dilemas do Analisador Lexicográfico
 
