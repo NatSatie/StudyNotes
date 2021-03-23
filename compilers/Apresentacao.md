@@ -9,7 +9,7 @@
  4. [Deterministic Finite Automata (DFA) e Non-deterministic Finite Automata (NFA)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part3.md)
 
 ## Parte 2: Análise Sintática
- 1. Introdução, Analisador Sintático (Parser)
+ 1. [Introdução, Analisador Sintático (Parser)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part1.md)
  2. Parser Tree 
 ## Parte 3: Análise Semântica
 
