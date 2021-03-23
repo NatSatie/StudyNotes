@@ -1,11 +1,17 @@
 ﻿# Notas de aula de Compiladores
 
 ### Referências 👀
+
 [Stack Frame Layouts](http://shio2.k.hosei.ac.jp/ntro/)
+
 DEVto [Generic Compiler Toolchain](https://dev.to/matthewchrobak/generic-compiler-toolchain-4ej7)
+
 TutorialsPoint [Compilers Design](https://www.tutorialspoint.com/compiler_design/index.htm)
+
 Youtube: [Parsing](https://youtu.be/r6vNthpQtSI)
+
 Youtube: [Comparing C to machine language](https://youtu.be/yOyaJXpAYZQ)
+
 Youtube: [How a compiler works in 1 minute](https://youtu.be/IhC7sdYe-Jg)
 
 ## Interpretando a jornada a frente:
