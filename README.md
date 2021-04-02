@@ -1,4 +1,4 @@
-# Anotações de aulas📚
+﻿# Anotações de aulas📚
 Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz para o trabalho e para a faculdade. 
 
  ## Angular 🅰️	
@@ -9,6 +9,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 ## Disciplinas UNICAMP
 
  - [Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
+ - [Redes de Computadores](https://github.com/NatSatie/StudyNotes/blob/main/redes/Apresentacao.md)
  - Sistemas Operacionais (em breve)
 
 ## Git 🐙
