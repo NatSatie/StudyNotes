@@ -5,7 +5,7 @@
 O livro de referência é *Redes de computadores e a Internet, uma abordagem top-down*.
 
 ## Parte 1: Redes de Computadores e a Internet
- 1. [O que é internet?](https://github.com/NatSatie/StudyNotes/blob/main/redes/cap_1/part1.md)
+ 1. [O que é internet?](https://github.com/NatSatie/StudyNotes/blob/main/redes/part1/part1.md)
 
 
 
