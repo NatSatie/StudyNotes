@@ -1,9 +1,12 @@
-﻿# Anotações de Redes de Computadores?
+﻿# Anotações de Redes de Computadores
 
 **Observação: Tem várias partes do texto que são bem experimentais e por favor não levem 100% a sério, é um caderno de anotações**
 
-## Parte 1: O que é internet?
- 1. [Como internet funciona?](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part1/part1.md)
+O livro de referência é *Redes de computadores e a Internet, uma abordagem top-down*.
+
+## Parte 1: Redes de Computadores e a Internet
+ 1. [O que é internet?](https://github.com/NatSatie/StudyNotes/blob/main/redes/cap_1/part1.md)
+
 
 
 
