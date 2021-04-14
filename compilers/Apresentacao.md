@@ -12,7 +12,8 @@
  1. [Introdução, Analisador Sintático (Parser)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part1.md)
  2. Parser Tree 
 ## Parte 3: Análise Semântica
-
+ 1. [AST - Abstract Syntac Tree](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part1.md)
+ - Fun Fact: [AST em JS](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/funFact.md)
 ## Parte 4: Geração de Código
 
 ## Parte 5: Data-flow Analysis e Otimizações Básicas
