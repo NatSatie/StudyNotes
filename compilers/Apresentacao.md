@@ -7,6 +7,7 @@
  2. [Tokens](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part1.md)
  3. [Regex](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part2.md)
  4. [Deterministic Finite Automata (DFA) e Non-deterministic Finite Automata (NFA)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part3.md)
+ 4. [Exercício de conversão de NFA para DFA](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_1/part4.md)
 
 ## Parte 2: Análise Sintática
  1. [Introdução, Analisador Sintático (Parser)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part1.md)
