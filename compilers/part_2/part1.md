@@ -28,7 +28,7 @@ Será que é possível que podemos adicionar nomes com expressões regulares e d
 
 Quando analisamos determinados exemplos, percebemos que determinadas expressões depende uma da outra, provocando uma relação de recursão mútua. E não podemos representar expressões apenas por regex. Com autômatos determinísticos também não temos a capacidade de contagem (memória unitária).
 
-
+(não terminei de escrever, perdão)
 
 
 > Written with [StackEdit](https://stackedit.io/).
