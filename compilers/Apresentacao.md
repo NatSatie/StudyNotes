@@ -11,7 +11,9 @@
 
 ## Parte 2: Análise Sintática
  1. [Introdução, Analisador Sintático (Parser)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part1.md)
- 2. Parser Tree 
+ 2. [Predictive Parser](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part2.md)
+ 3. [Construindo Predictive Parser](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part3.md)
+ 4. 
 ## Parte 3: Análise Semântica
  1. [AST - Abstract Syntax Tree](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part1.md)
  - Fun Fact: [AST em JS](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/funFact.md)
