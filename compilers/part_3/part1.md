@@ -8,7 +8,7 @@ As ASTs são parecidas com as parser trees com alguns comportamentos especiais.
 
 A ideia da ASTs é eliminar parte dos lixos desnecessários. 
 
-## Aula: Porque usarmos uma AST? Recursive Descend Parser
+## Aula: Escrevendo um interpretador de parse na mão
 
 Considere a seguinte gramática LR (1) *(left to right parsing, rightmost derivation)* abaixo:
 
@@ -92,6 +92,8 @@ Nesse caso temos um parser com interpretador combinados. E se gerarmos automatic
 
 > 🥳 Fun fact: [AST Explorer, aplicação de AST em Javascript](https://astexplorer.net/)
 
+## Aula: Aquecendo de um interpretador manual para a AST
+
 ```javascript
 
 // Geração automática do JavaCC
@@ -122,5 +124,82 @@ int Term():
 int Factor():
 	{...}
 ```
+
+Tudo que aprendemos a esse ponto é interpretação, os exemplos acima foram códigos manuais de um interpretador de um parser primitivo.
+
+Se usarmos o JavaCC, podemos construir nós, e cada nó pode gerar filhos que são APONTADORES de sub-árvores.
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_3/tree.jpg)
+
+```javascript
+(...)
+Exp Exp():
+	{Exp e1, e2;}
+		{e1 = Term()
+			(
+				"+" e2=Term() { e1 = PlusExp(e1, e2);}
+				| "-" e2=Term() { e1 = MinusExp(e1, e2);}	
+			)*
+			{return e1;}
+		}
+(...)
+```
+
+E como vamos construir as classes que estão presentes no JavaCC?
+
+```javascript
+public abstract class Exp(){
+	public abstract int eval();
+}
+
+// Esses evals são chamados na raiz do nó e vai descendo até encontrá-los.
+public class PlusExp extends Exp {
+	private Exp e1, e2;
+	public PlusExp( Exp a1, Exp a2){
+		e1 = a1;
+		e2 = a2;
+	}
+	public int eval(){
+		return e1.eval() + e2.eval();
+	}
+
+}
+
+(...)
+public class Identifier extends Exp {
+	private String f0;
+	public Identifier( String n0){
+		f0 = n0;
+	}
+	public int eval(){
+		return lookup(f0);
+	}
+}
+```
+Observe que para cada nó temos um eval() específico que afeta diretamente nossa AST. 👀👀
+
+E se tivermos uma árvore que é percorrida várias vezes? Podemos criar evals diferentes de acordo com nossa necessidade. Porém, se percorremos várias vezes a árvore e chamando várias vezes o eval() **TODA AÇÃO DO EVAL IMPACTA TODAS AS CLASSES DA AST**.
+
+E porque isso acontece? Eval() está **DENTRO** da classe.
+
+## Soluções para evitar que eval() impacte toda a AST
+
+### Algoritmo Leigo
+
+```javascript
+int eval(Node n):
+	TypeCheck(n){
+		if (n instanceof VariableDeclaration){
+			(...)
+		} else if (n instanceof Plus){...}
+	}
+```
+
+Esse algoritmo leigo, não é tão eficiente já que temos vários if else no código. Por isso vamos implementar o design pattern [Visitor](https://refactoring.guru/pt-br/design-patterns/visitor).
+
+
+
+
+
 
 > Written with [StackEdit](https://stackedit.io/).
