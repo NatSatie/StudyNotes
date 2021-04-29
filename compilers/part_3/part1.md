@@ -195,7 +195,8 @@ int eval(Node n):
 	}
 ```
 
-Esse algoritmo leigo, não é tão eficiente já que temos vários if else no código. Por isso vamos implementar o design pattern [Visitor](https://refactoring.guru/pt-br/design-patterns/visitor).
+Esse algoritmo leigo, não é tão eficiente já que temos vários if else no código. Por isso vamos implementar o design pattern 
+[Visitor](https://refactoring.guru/pt-br/design-patterns/visitor).
 
 
 
