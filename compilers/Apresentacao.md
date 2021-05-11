@@ -17,6 +17,8 @@
 ## Parte 3: Análise Semântica
  1. [AST - Abstract Syntax Tree](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part1.md)
  - Fun Fact: [AST em JS](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/funFact.md)
+ 2. [Symbol Table](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part2.md)
+ 3. [Análise Sintática]()
 ## Parte 4: Geração de Código
 
 ## Parte 5: Data-flow Analysis e Otimizações Básicas
