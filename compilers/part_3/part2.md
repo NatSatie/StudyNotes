@@ -1,7 +1,9 @@
 # Symbol Table
 
 📺 Revisão [Hash table](https://youtu.be/shs0KM3wKv8)
+
 📺 Conteúdo de apoio: [Tutorial point (india: Symbol table)](https://youtu.be/oyG_JfrbTCQ)
+
 📺 Conteúdo de apoio: [Matte Academy: Symbol Table](https://youtu.be/mly3uIsy7OU)
 
 Precisamos verificar a corretude da AST, e precisamos fazer a verificação de tipos. 
