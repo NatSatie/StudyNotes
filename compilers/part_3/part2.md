@@ -1,10 +1,10 @@
 # Symbol Table
 
 📺 Revisão [Hash table](https://youtu.be/shs0KM3wKv8)
-
 📺 Conteúdo de apoio: [Tutorial point (india: Symbol table)](https://youtu.be/oyG_JfrbTCQ)
-
 📺 Conteúdo de apoio: [Matte Academy: Symbol Table](https://youtu.be/mly3uIsy7OU)
+📎 Mais detalhes sobre Symbol table: [Wikipédia](https://en.wikipedia.org/wiki/Symbol_table)
+
 
 Precisamos verificar a corretude da AST, e precisamos fazer a verificação de tipos. 
 
@@ -53,6 +53,11 @@ class Bucket {
 			next = n;
 	}	
 }
+```
+
+A implementação dessa hash é algo bem caro. São feitas várias comparações desnecessárias e para resolver podemos criar um único símbolo.
+
+```javascript
 class HashT {
 		final int SIZE =256;
 		Bucket table[] = new Bucket[SIZE];	
@@ -82,6 +87,8 @@ class HashT {
 
 ## Symbol table em pacotes
 
+Símbolo é usado para fazermos uma comparação de igualdade rápida, extrai-se o hash mais rápido. E comparações de greater-than são mais rápidos.
+
 ```javascript
 package Symbol;
 
@@ -94,8 +101,10 @@ public class Table {
 	// idêntico a a -> int, 
 	public void put(Symbol key, Object value);
 	public Object get(Symbol key);
+	// definem o início e final do escopo com undo, e mantém top e previous top (prevtop)
 	public void beginScope();
 	public void endScope();
+	//Enumeration é um método auxiliar que serve para identificar nossas chaves 
 	public java.util.Enumeration.keys();
 }
 ```
@@ -109,7 +118,8 @@ package Symbol;
 
 public class Symbol {
 	private String name;
-		
+	
+	//Construtor
 	public static Symbol (String n){
 		name = n;
 	};
@@ -120,15 +130,18 @@ public class Symbol {
 		return name;
 	};
 
+	//Método não-construtor
 	public static Symbol symbol(String n){
 		String u = n.intern() // gera símbolo único
+		//A string u é levado para um dicionário 
 		Symbol s = (Symbol)dict.get(u);
 		if (s==null){
 			s = new Symbol(u);
 			dict.put(u,s);
 		}
+		//Assim o símbolo s é salvo e tem um bind/amarrar em um dicionário com o u, então é  u-> int
+		//Se s for null, indica que não existe dentro da tabela
 	}
-
 }
 public class Table {
 	public Table();
@@ -145,8 +158,6 @@ public class Table {
 - Como construir um symbol table
 - Verificação de tipos
 
-
-🛠️Em construção🛠️
 
 
 > Written with [StackEdit](https://stackedit.io/).
