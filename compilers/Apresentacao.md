@@ -1,4 +1,4 @@
-﻿# Anotações de Projeto e Construção de Compiladores
+# Anotações de Projeto e Construção de Compiladores
 
 **Observação: Tem várias partes do texto que são bem experimentais e por favor não levem 100% a sério, é um caderno de anotações**
 
@@ -13,14 +13,19 @@
  1. [Introdução, Analisador Sintático (Parser)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part1.md)
  2. [Predictive Parser](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part2.md)
  3. [Construindo Predictive Parser](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_2/part3.md)
- 4. 
+
 ## Parte 3: Análise Semântica
  1. [AST - Abstract Syntax Tree](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part1.md)
  - Fun Fact: [AST em JS](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/funFact.md)
  2. [Symbol Table](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part2.md)
- 3. [Análise Sintática]()
-## Parte 4: Geração de Código
+ 3. [Análise Sintática](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_3/part3.md)
 
-## Parte 5: Data-flow Analysis e Otimizações Básicas
+## Parte 4: Representação Intermediária (IR) e Blocos Básicos (BB)
+
+ 1. [Representação Intermediária, Árvores e DAGs - directed acyclic graphs](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part1.md)
+
+## Parte 5: Geração de código
+
+## Parte 6: Data-flow Analysis e Otimizações Básicas
 
 > Written with [StackEdit](https://stackedit.io/).
