@@ -22,8 +22,12 @@
 
 ## Parte 4: Representação Intermediária (IR) e Blocos Básicos (BB)
 
- 1. [Representação Intermediária, Árvores e DAGs - directed acyclic graphs](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part1.md)
-
+ 1. [Representação Intermediária (IR)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part1.md)
+ 2. [Seleção de instruções e maximal munch](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part2.md)
+ 3. [Seleção de instruções e programação dinâmica](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part3.md)
+ 4. [Representação Intermediária Linear, Blocos Básicos](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part4.md)
+ 5. [Stack Frame / Registros de ativação](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part5.md)
+ 
 ## Parte 5: Geração de código
 
 ## Parte 6: Data-flow Analysis e Otimizações Básicas
