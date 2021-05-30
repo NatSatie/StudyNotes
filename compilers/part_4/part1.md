@@ -1,4 +1,4 @@
-# Representação intermediária
+﻿# Representação intermediária (IR)
 
 Dentro da disciplina de compiladres começamos a transição para o back-end do compilador, isso significa que vamos para a transformação do código de máquina.
 
@@ -25,7 +25,7 @@ Podemos usar árvores ou um DAG - *directed acyclic graph*. Quando encontramos u
 
 `a := b * -c + b * -c`
 
-```javascript
+```javascript]]
 // Representação de uma árvore
 // (something) é um label para o operador/variável
 // Construção de uma árvore é de baixo para cima
@@ -54,6 +54,37 @@ Podemos usar árvores ou um DAG - *directed acyclic graph*. Quando encontramos u
 	      (b0)b    (t0)uminus 
 	                   |
 	                 (c0)c    
+```
+
+## Aplicações de IR
+
+ - Detecção de sub-expressões comuns
+ - Detecção de identificadores, basta observar as folhas
+ - Detecção de sentenças que geram valores que podem ser usados fora do bloco.
+
+Lembre-se DAG pode ter mais de uma raiz e árvore não, por isso, podemos ver a raiz e por onde vai ser usado.
+
+*Nas referências dos livros são representações em árvore.*
+
+## Representação em árvore 
+Considere quando pensamos em assembly, podemos pegar o frame pointer, somar o offset para somar o endereço da base do array/do vetor, obs: o compilador aloca memória para o array, o array todo fica no heap.
+
+Mains informações de alocação de memória em um array:
+[Vídeo](https://youtu.be/KvZUY4QHkVo)
+[Leitura](http://www.cs.ecu.edu/karl/3300/spr16/Notes/C/Array/heap.html)
+
+```javascript
+//Exemplo: a[i]
+//MEM == memória
+		   	  MEM
+			   |
+			   +
+			/     \
+		  MEM     BINOP
+		  |       /  |  \
+		  e     MUL  i   CONST
+			   	 	      |
+					      w
 ```
 
 **🚧🚧🚧 EM CONSTRUÇÃO 🚧🚧🚧**
