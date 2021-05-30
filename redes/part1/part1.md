@@ -34,5 +34,4 @@ Os protocolos são criados a partir da IETF, internet engineering task force, e 
 
 > Um protocolo define o formato e a ordem das mensagens trocadas entre duas ou mais entidades comunicantes, bem como as ações realizadas na transmissão e/ou recebimento de uma mensagem como um evento.
 
-
 > Written with [StackEdit](https://stackedit.io/).
