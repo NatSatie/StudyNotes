@@ -1,7 +1,8 @@
 ﻿# Anotações de aulas📚
 Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz para o trabalho e para a faculdade. 
 
- ## Angular 🅰️	
+## Angular 🅰️	
+ 
  1. [Revisão de Typescript](https://github.com/NatSatie/notasDeAula/blob/main/angular/angular_part1.md)
  2. [Propriety binding, Diretivas, Eventos](https://github.com/NatSatie/notasDeAula/blob/main/angular/angular_part2.md)
  3. Projeto: [Rotas, Injeção de Dependência, Serviços](https://github.com/NatSatie/notasDeAula/blob/main/angular/angular_part3.md)
@@ -32,7 +33,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 ## React.js ⚛️
  
  1. [Hooks](https://github.com/NatSatie/notasDeAula/blob/main/react/hooks.md)
- 
+
 ## RxJs: Programação Reativa 🟣
   
  1. [Princípios, Observables, Promises](https://github.com/NatSatie/notasDeAula/blob/main/RxJS.md)
@@ -40,6 +41,10 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 ## SQL: Exercícios do CodeSignal 📊
 
  1. [Fundamentos do SQL](https://github.com/NatSatie/StudyNotes/blob/main/sql/part1.md)
+
+## Estudos Diversos 📚
+
+ 1. [Cypress e Testes E2E](https://github.com/NatSatie/StudyNotes/blob/main/testsE2E.md)
 
 ## Referências 🔖
 
