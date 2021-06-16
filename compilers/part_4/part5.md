@@ -1,4 +1,4 @@
-﻿# Stack Frame / Registros de ativação
+# Stack Frame / Registros de ativação
 
 ## Introdução
 
