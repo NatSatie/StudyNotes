@@ -21,7 +21,8 @@ Para otimizar o código podemos fazer a eliminação de sub-expressões comuns (
 
 # Copy Propagation
 
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/copyPropagation1.png)
 
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/copyPropagation2.png)
 
-
-
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/constPropagation.png)
