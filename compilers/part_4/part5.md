@@ -10,6 +10,22 @@ Motivação: [StackOverflow: Explain the concept of a stack frame in a nutshell]
 
 ## Stack Frame ou Registro de ativação
 
+ Fazemos a manipulação de variáveis como um conjunto, e não podemos fazer o push e pop das variáveis inidivialmente. O SP (stack pointer), todas as posições além do SP são lixo e todas as anteriores são alocadas.
+
+
+
+![imagem](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_4/stackframes.png)
+
+
+
+O desenho acima descreve como funciona (por convenção) um frame pointer. Observe que cresce de cima para baixo (do endeço maior para o menor). Mas o formato do frame depende da: linguagem compilada, do processador alvo, e layout padrão do fabricante do processador.
+
+
+
+
+
+
+
 ## Frame Pointer
 
 ## Parâmetros
