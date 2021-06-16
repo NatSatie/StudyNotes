@@ -40,3 +40,7 @@ Podemos otimizar nesse caso, assim como em Copy Propagation (substitur a referê
 Eliminação de código morto, signifique que temos uma variável usada em um bloco, porém não vai ser usada mais em outros blocos.
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/deadCodePropagation.png)
+
+## Commom Sub-expression Elimination
+
+Eliminação
