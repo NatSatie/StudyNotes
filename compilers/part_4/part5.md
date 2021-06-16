@@ -20,13 +20,31 @@ Motivação: [StackOverflow: Explain the concept of a stack frame in a nutshell]
 
 O desenho acima descreve como funciona (por convenção) um frame pointer. Observe que cresce de cima para baixo (do endeço maior para o menor). Mas o formato do frame depende da: linguagem compilada, do processador alvo, e layout padrão do fabricante do processador.
 
+### Porque as variáveis locais estão próximos do frame pointer?
 
-
-
+Se fizermos o acesso do `endereço(frame_pointer) -+ CONSTANTE`, podemos acessar os argumentos do frame anterior, então podemos acessar variáveis locais e argumentos, dependendo do sinal da sua `CONSTANTE` ou `OFFSET`.
 
 
 
 ## Frame Pointer
+
+Considere uma situação no qual `f()` chama `g(a_1, a_2, ... a_n)`, cada função são respectivamente, **caller/chamador** e **callee/chamado**.
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_4/stackframes_1.png)
+
+### Passo 1 
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_4/stackframes_2.png)
+
+### Passo 2
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_4/stackframes_3.png)
+
+O frame pointer em algumas arquiteturas pode ser um registrador!
+
+### Qual a utilidade do FP?
+
+
 
 ## Parâmetros
 
