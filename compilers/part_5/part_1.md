@@ -13,5 +13,15 @@ As otimizações afetam a eficiência do programa, porém não pode alterar a sa
 - Constant Folding
 - Register Allocation
 
+## Exemplo de Otimizações de Código Básicas
+
+### Principais fontes de otimização
+
+Para otimizar o código podemos fazer a eliminação de sub-expressões comuns (CSE), propagação de cópias, eliminação de código morto e constant folding. Temos dois tipos: transformações locais (dentro de um bloco básico) e transformações globais (envolve mais de um bloco básico).
+
+# Copy Propagation
+
+
+
 
 
