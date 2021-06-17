@@ -9,7 +9,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 
 ## Disciplinas UNICAMP
 
- - [Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
+ - [MC921 - Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
  - [Redes de Computadores](https://github.com/NatSatie/StudyNotes/blob/main/redes/Apresentacao.md)
  - Sistemas Operacionais (em breve)
 
