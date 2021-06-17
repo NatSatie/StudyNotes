@@ -28,10 +28,11 @@
  4. [Representação Intermediária Linear, Blocos Básicos](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part4.md)
  5. [Stack Frame / Registros de ativação](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part5.md)
 
-## Parte 5: Geração de código
+## Parte 5: Data-flow Analysis
 
-1. [Otimização de código](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part1.md)
+1. [Análise do fluxo de dados](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part1.md)
+2. [Reaching Definitions](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part2.md)
 
-## Parte 6: Data-flow Analysis e Otimizações Básicas
+## Parte 6: Otimizações Básicas
 
 > Written with [StackEdit](https://stackedit.io/).
