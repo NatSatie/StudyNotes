@@ -75,22 +75,74 @@ g(a1, a2, ...){
 }
 ```
 
+Considere que o código quando tem  `>>>` quer dizer que é a localização do compilador
+
 ```
+// Passo 1
 f(...){
-	> x = y + 1
-	// $t é o caller-save
+	>>> x = y + 1
+	// $t é o caller-save, que foi criado para a linha apontada
 	$t1 = x
-	
 	g(a1, a2, ...)
-	// x não é chamado novamente
 }
 ```
 
 ```
+// Passo 2
+f(...){
+	x = y + 1
+	>>>  g(a1, a2, ...)
+	// x não é chamado novamente, então o $t1 não exis
+}
 ```
 
+### Exemplo 2: Calle-save ($s0 - $s9)
 
+```
+// g() somente salva se precisar de $s1 dentro
+g(a1, a2, ...){
+	// G() é rersponsável por salvar $s1
+	$s1 = 2 * k
+}
+```
 
-### Exemplo 2: Caller-save ($t0 - $t9)
+```
+g(a1, a2, ...){
+	// Pilha = $s1
+	$s1 = 2 * k
+	// $s1 = pilha
+}
+```
+
+### Exemplo 3: Calle-save ($s0 - $s9)
+
+```
+// Passo 1
+	// x é alocado a um registrador callee-save $s1
+f(...){
+	>>> x = y + 1
+	// Então $s1 = x
+	g(a1, a2, ...)
+	// Como x é usado depois da chamada de g(), então temos que recuperar o valor de x
+	// x = $s1
+	y = 2*x
+}
+```
+
+```
+// Passo 2
+	// SE g() não usar $s1, podemos substituir o x por $s1 diretamente
+f(...){
+	$s1 = y + 1
+	g(a1, a2, ...)
+	y = 2*$s1
+}
+```
+
+## Endereço de Retorno
+
+Atualmente, a pilha fica no ra ou $31pela arquitetura MIPS.
+
+Procedimentos que não são folhas (**TODO:** verificar o que é ), devem salvar na pilha.
 
 > Written with [StackEdit](https://stackedit.io/).

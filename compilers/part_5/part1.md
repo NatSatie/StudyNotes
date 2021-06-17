@@ -1,6 +1,6 @@
 
 
-# Geração de Código: Análise do Fluxo de Dados
+# Análise do Fluxo de Dados
 
 ## Introdução
 
@@ -43,4 +43,3 @@ Eliminação de código morto, signifique que temos uma variável usada em um bl
 
 ## Commom Sub-expression Elimination
 
-Eliminação
