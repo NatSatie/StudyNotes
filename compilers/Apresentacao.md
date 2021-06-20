@@ -43,8 +43,7 @@
 ## Parte 6: Otimizações
 
 1. [Análise de Longevidade (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-2. [DU chain (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-3. [Grafo de interferência (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
+3. [Grafo de interferência (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part2.md)
 4. [Coloração de Registradores (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
 5. [Coloring and Coalescing (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
 6. [Induction Variables (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
