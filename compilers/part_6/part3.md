@@ -1,2 +1,2 @@
-# Coloração de Registradores
+# Coloring e Coalescing
 

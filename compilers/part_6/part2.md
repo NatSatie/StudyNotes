@@ -64,6 +64,7 @@ Temos quatro fases:
 2. SIMPLIFY: simplificar/reduzir o IG, são feitas outras chamadas caso seja necessário
 3. SPILL:  Caso essa variável, não consiga uma cor ouseja, em um registrador por alocação.
 4. SELECT: As informações, os nós são armazenados numa pilha e fazemos o `pop` e trazemos os nós de volta para o grafo e é dado uma cor para o nó.
+5. Bônus Phase: START OVER
 
 ## Fase 1: BUILD
 
@@ -106,19 +107,45 @@ Como podemos observar esse programa? Temos `m` chamado 2 vezes na terceira linha
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/coloringGraph1.jpg)
 
-Como podemos ver podemos empilhar o nós dessa forma
+Como podemos ver podemos empilhar o nós dessa forma representando o seu **potencial spill**.
 
-![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/graphStack.gif.jpg)
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/graphStack.gif)
 
+## Fase 4: SELECT
 
+Nessa fase vamos atribuir as cores, então para todos os nós não marcados como `spill`, serão coloridos.
 
+Agora vamos fazer o tratamento dos nós que foram separados para fazer o tratamento especial. Os nós serão desempilhados e cada um será colorido com a cor apropriada até que o último seja colorido.
 
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/graphStack2.gif)
 
+**E caso não tenha um cor para um dos nós?**
 
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/graphStack3.gif)
 
+Quando todas as cores são usadas tenho uma marcação de um `spill real`, então, `m` é removido do grafo e é reescrito o código de acesso de `m`. Ou seja, sua representação intermediária é alterada.
 
+```
+m = m +1; // m é o nó
+...
+//t3 é um temporário colocado
+t3 := M[m]
+t3 := t3+1
+M[m] := t3 
+```
 
+Então quando `m` deixa de pertencer do IG, ele é removido e temos a simplificação.
 
+## Fase 5: START OVER 
+
+Isso acontece quando:
+
+- Select não consegue atribuir uma cor ao nó
+- reescrito o código para gravar o valor na memória
+- Isso vai provocar novos temporários e novas longevidade
+- Repitir novamente até o slect atribuir cores a todos os nós
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/map.jpg)
 
 
 
