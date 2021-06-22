@@ -59,3 +59,4 @@ Então `gen` é a geração de definições e `kill` mata as definições.
 <a href="https://www.codecogs.com/eqnedit.php?latex=out[n]&space;=&space;gen[n]&space;\cup&space;(in[n]&space;-&space;kill[n])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?out[n]&space;=&space;gen[n]&space;\cup&space;(in[n]&space;-&space;kill[n])" title="out[n] = gen[n] \cup (in[n] - kill[n])" /></a>
 
 Considere que `gen[n]` é `{d}` e `kill[n]` como `defs(x) - {d}`
+
