@@ -77,6 +77,8 @@ Com o resultado do coalescing conseguimos 3 vizinhos, ou 3 nós significativos, 
 | a        | 2                    | 2                |
 | b        | 0                    | 4                |
 
+Antes de fazer o coalescing temos que gerar um grafo e fazemos o simplify. **Então temos remover os nós brancos acima, que são nós não-signigicativos**.
+
 ### Exemplo 1: G2
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/coaslescing5.jpg)
@@ -84,6 +86,11 @@ Com o resultado do coalescing conseguimos 3 vizinhos, ou 3 nós significativos, 
 | variável | nó não-significativo | nó significativo |
 | -------- | -------------------- | ---------------- |
 | a&b      | 0                    | 4                |
+
+Após a junção dos nós `a` e `b`, observe que com o método BRIGGs, não podíamos colorir pois tinha nós não-significativos, o nós brancos que removemos usando o SIMPLIFY no `G1`.
+ Depois do simplify, o `a` some, `G2` vira subgrafo de `G1`, mantemos a complexicade de colorir. 
+
+**Porém** isso só acontece pois temos duas arestas dos nós vizinhos de `a`, que conectam em `b`, após o coalescing essas arestas somem. Por isso, o `exemplo 2` vai tentar fazer uma situação que é diferente desse.
 
 ### Exemplo 2: G1
 
@@ -94,6 +101,10 @@ Com o resultado do coalescing conseguimos 3 vizinhos, ou 3 nós significativos, 
 | a        | 2                    | 2                |
 | b        | 0                    | 3                |
 
+Como `a ` em `G1` tem nós não-significativos podem ser removidos como sempre.
+
+Porém temos o nó `b` que pode ser colorido! Então o que acontece com o coalescing??
+
 ### Exemplo 2: G2
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/coaslescing7.jpg)
@@ -101,4 +112,39 @@ Com o resultado do coalescing conseguimos 3 vizinhos, ou 3 nós significativos, 
 | variável | nó não-significativo | nó significativo |
 | -------- | -------------------- | ---------------- |
 | a&b      | 0                    | 4                |
+
+Após o coalescing muda o número de npos não-significativos, ou seja, `a&b != b`!!!! Então eu aumentei a complexidade do problema, como violamos a estratégia de George, então não podemos continuar.
+
+## O que aprendemos com Coalescing?
+
+- são estratégias conservativas
+- podem sobrar MOVES que poderiam ser removidos
+- é melhor que fazer o SPILL
+- É necessário anotar com arestas pontilhdas os vértices **move-related**
+- Quando não podemos fazer a simplificação ou o coealescing podemos dizer que estão liberados ou freezed 
+
+## Quais são as fases de alocação do Coalescing?
+
+1. BUILD:
+   1. construir o IG
+   2. Categorizar em move-related ou move-unrelated
+2. SIMPLIFY
+   1. remover os nós não-significativos, grau maior que K, um de cada vez
+3. COALESCE:
+   1. fazer o coalesce conservativo dos move-related no grafo resultante do passo anterior
+   2. Com a reduçao de graus pé provável que apareça mais oportunidades de coalescing
+   3. Quando um nó resultante não é mais move-related ele fica disponível para a prórxima simplificação
+4. FREEZE:
+   1. executando quando tem o simplify nem o coalescing podem ser aplicados
+   2. procura nós move-related de grau baixo
+   3. congela os moves desses nós. Eles passsam a ser candidatos para a simplificação
+5. SPILL: 
+   1. Se não houver nós de grau baixo, selecionamos um nó com grau significativo para spill
+   2. coloca-se esse nó na pilha
+6. SELECT:
+   1. desempilhar todos os nós e atribuir cores
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_6/map2.jpg)
+
+
 

@@ -32,6 +32,7 @@
   3. [Seleção de instruções e programação dinâmica](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part3.md)
   4. [Representação Intermediária Linear, Blocos Básicos](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part4.md)
   5. [Stack Frame / Registros de ativação](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part5.md)
+    6. [Alocação de Registradores locais](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_4/part6.md)
 
 ## Parte 5: Data-flow Analysis
 
@@ -43,12 +44,9 @@
 ## Parte 6: Otimizações
 
 1. [Análise de Longevidade](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-3. [Grafo de interferência](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part2.md)
-3. [Coloração de Registradores (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-4. [Coloring and Coalescing (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-5. [Induction Variables (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-6. [Strenght Reduction (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
-7. [Elimination (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part1.md)
+3. [Variáveis Globais: Grafo de interferência e Coloração de Registradores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part2.md)
+3. [Alocação de Registradores com Coalescing](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part3.md)
+4. [](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part4.md)
 
 > Written with [StackEdit](https://stackedit.io/).
 
