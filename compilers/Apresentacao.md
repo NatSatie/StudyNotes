@@ -48,5 +48,3 @@
 3. [Alocação de Registradores com Coalescing](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part3.md)
 4. [](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_6/part4.md)
 
-> Written with [StackEdit](https://stackedit.io/).
-
