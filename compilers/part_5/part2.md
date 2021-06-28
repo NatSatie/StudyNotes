@@ -54,7 +54,7 @@ Então `gen` é a geração de definições e `kill` mata as definições.
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/genKill.png)
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=in[n]&space;=&space;\large{\bigcup_{p&space;\in&space;pred[n]}}&space;\normalsize{out[p]}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?in[n]&space;=&space;\large{\bigcup_{p&space;\in&space;pred[n]}}&space;\normalsize{out[p]}" title="in[n] = \large{\bigcup_{p \in pred[n]}} \normalsize{out[p]}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=in[n]&space;=&space;\large{\bigcup_{p&space;\in&space;pred[n]}}&space;\normalsize{out[p]}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?in[n]&space;=&space;\large{\bigcap_{p&space;\in&space;pred[n]}}&space;\normalsize{out[p]}" title="in[n] = \large{\bigcup_{p \in pred[n]}} \normalsize{out[p]}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=out[n]&space;=&space;gen[n]&space;\cup&space;(in[n]&space;-&space;kill[n])" target="_blank"><img src="https://latex.codecogs.com/gif.latex?out[n]&space;=&space;gen[n]&space;\cup&space;(in[n]&space;-&space;kill[n])" title="out[n] = gen[n] \cup (in[n] - kill[n])" /></a>
 

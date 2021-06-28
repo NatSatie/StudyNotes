@@ -23,7 +23,7 @@ Para otimizar o código podemos fazer a eliminação de sub-expressões comuns (
 
 # Copy Propagation
 
-Dentro do processo de Coppy Propagation, podemos observar que quando atribuímos 
+Dentro do processo de Copy Propagation, podemos observar que quando atribuímos 
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/compilers/part_5/copyPropagation1.png)
 

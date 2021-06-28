@@ -145,4 +145,21 @@ Atualmente, a pilha fica no ra ou $31pela arquitetura MIPS.
 
 Procedimentos que não são folhas (**TODO:** verificar o que é ), devem salvar na pilha.
 
+## Statics Links
+
+Temos funções aninhadas (como abaixo), no qual precisamos de uma ligação entre o stack frame de f para o stackframe de g para acessar o valor de x, então teremos um apontador ou static link que aponta ao frame de g  
+
+```
+int f(){
+	int x
+	int g(){
+		y = x
+	}
+}
+```
+
+
+
+
+
 > Written with [StackEdit](https://stackedit.io/).

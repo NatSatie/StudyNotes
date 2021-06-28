@@ -38,8 +38,7 @@
 
 1. [Análise do fluxo de dados](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part1.md)
 2. [Reaching Definitions](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part2.md)
-3. [UD chain (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part3.md)
-4. [Copy Propagation and Constant Folding (TODO)](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part4.md)
+4. [Copy Propagation and Constant Folding](https://github.com/NatSatie/StudyNotes/blob/main/compilers/part_5/part4.md)
 
 ## Parte 6: Otimizações
 
