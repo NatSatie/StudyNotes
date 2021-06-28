@@ -23,7 +23,7 @@ Um vício de linguagem que temos é que não existe explicitamente um TCP recept
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part2_img1.jpg)
 
-## TCP orientado a bytes
+## TCP: Orientado a bytes
 
 Observe que o temos um dado que é dividido em segmentos TCP, isso pode ser um objeto interio vindo da camada de aplicação.
 
@@ -35,9 +35,55 @@ O objeto abaixo é o **cabeçalho do segmento TCP**
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part2_img3.jpg)
 
-*(aula 25-05 58min)*
+>  *(aula 25-05 58min)*
 
 - número porta de origem
 - número da porta de destino
-- núemro de sequência: é um número aleatório
+- número de sequência (seq): é um número aleatório
+- número de reconhecimento (ACK - acknowledgment number):
+- dados (data): informação
+
+(TODO)
+
+## Tempo de Resposta (RTTs) e Temporização
+
+ *(aula 25-05 1h08min)*
+
+## TCP: Transferência confiável de dados
+
+Observe o algoritmo abaixo, que descreve os possíveis cenários que pode ocorrer dentro da transmissão
+
+```
+while(true){
+	switch(event):
+		case 1: 
+			- dados são recebidos da aplicação acima
+			- cria segmento TCP com número de sequência nextSeqSum
+			- iniciliza temporarizador para segmento nextSeqSum
+			- passa segmento para IP
+			- nextSeqSum = nextSeqSum + length(dados)
+		case 2:
+			- temporatizador expirado de segmento com número de sequência y
+			- retransmite segmento com número de sequência y
+			- reinicia temporarizador para número de sequência y
+		case 3:
+			- ACK  recebido com valor de campo ACK de y
+			if (y > sendBase) {
+				- ack cumulativo de todos os dados até y
+			} else {
+				(TODO)
+			}
+
+}
+```
+
+### Geração de ACKs
+
+(TODO tabela)
+
+> aula 25-05 16min
+
+## Fast Retransmit
+
+
 
