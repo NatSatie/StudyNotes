@@ -1,4 +1,4 @@
-# P2P compartilhamento de arquivos
+# Camadas de aplicação: P2P
 
 [Vídeo sobre OpenCDN Nic.br](https://youtu.be/QDpZM3vO_nM)
 
