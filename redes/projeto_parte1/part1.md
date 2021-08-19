@@ -4,7 +4,9 @@ Na Arquitetura da Internet precisamos do protocolo da internet é o IP, e seguim
 
 A maioria das camadas usam protocolo TCP, e é repassado pelo segmento e temos comunicação para a camada de redes. E o datagrama IP vem encapsulado e passa pelo enlace de dados.
 
-## Conexão TCP
+## Conexão TCP - Transmission Control Protocol
+
+Revisando alguns tópicos de TCP, ele é um protocolo de transferência confiável que é executado na camada de redes fim a fim não confiável (IP).
 
 
 

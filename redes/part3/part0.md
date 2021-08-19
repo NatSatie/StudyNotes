@@ -1,10 +1,10 @@
-# TCP
+# Transferência confiável de dados
 
 ## Transferência confiável de dados sobre um canal perfeitamente confiável: rdt 1.0
 
 Nomearemos o protocolo como `rdt 1.0`, considere uma máquina de estado infinito - FSM de remetente para destinatário. 
 
-![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part3_tcp01.jpg)
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part2_tcp01.jpg)
 
 Então temos do lado do restinatário:
 
@@ -35,7 +35,21 @@ Nomearemos o protocolo como `rdt 2.0`, considere uma máquina de estado infinito
 
 Temos alguns sinais como ACK, de reconhecimento positivo e NACK de reconhecimento negativo que podem ser presentados por 1 e 0 respectivamente.
 
-![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part3_tcp02.jpg)
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part2_tcp02.jpg)
 
-![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part3_tcp03.jpg)
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/part3/part2_tcp03.jpg)
+
+## Transferência confiável de dados usando ACK e NACK: rdt 2.1
+
+## Transferência confiável de dados: rdt 2.2
+
+
+
+## Transferência confiável de dados por um canal com perda de dados e erros de bits: rdt 3.0
+
+
+
+
+
+
 
