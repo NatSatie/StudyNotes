@@ -81,13 +81,13 @@ Com a troca de mensagens, podemos criar projetos mais simples, no entanto, sua p
 Com multiprocessadores de memória distribuída, podemos juntos os dois pontos citados.
 
 
-# Classificação de Sistemas Distribuídos
+# Classificação de Sistemas Paralelos
 
 ## Sistemas multiprocessados
 
 - sistemas paralelos onde os múltiplos processadores tem acesso direto a uma memória compartilhada
 - sem relógio comum
-- UMA, uniform memory acesso, latência de acesso à memória é a mesma a qualquer processador
+- UMA, uniform memory acess, latência de acesso à memória é a mesma a qualquer processador
 - comunicação de processos, leitura e escrita da memória compartilhada
 - processadores de mesmo tipo estão no mesmo container
 
@@ -149,8 +149,60 @@ Função de roteamento considera para um nível `s`, se `s+1`-ésimo  bit mais s
 
 ## Multicomputadores (aula 3)
 
+- É um sistema paralelo onde múltiplos processadores não tem acesso direto à memória compartilhada.
+- Essa memória pode ou não formar um espaço de endereçamento comum.
+- Não tem relógio físico comum
+- São próximos fisicamente (não obrigatório)
+- fortemente acoplados, ou seja, em hardware e software
+- por exemplo, clusters.
 
 
+A comunicação pode ser feita por endereçamento comum ou troca de mensagens, o espaço de endereçamento comum, corresponde à arquitetura NUMA, non-uniform memory acess. E a topologia regulares e simétricas são usadas para computação de alto desempenho.
 
-## Processadores vetoriais
+De acordo com a conexão com os hacks entre os multicomputadores, muda sua performance e custo do uso de cabos e equipamento.
 
+### Topologia dos Multicomputadores
+
+A topologia pode varias em várias formas, como mesh, anel, torus, cubo e hipercubo.
+
+Na figura abaixo, temos na figura (a) um 2d mesh cada computadores tem 4 conexões, e o roteamento pode ser feito de várias formas (temos `k^2` processadores). Na figura (b) temos um hipercubo (`power(2, k)` processadores).
+
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/aula3_01.jpeg)
+
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/aula3_02.jpeg)
+
+Também temos outras formas de rotamento como:
+
+- bus ou barramento
+- anel
+- crossbar switch (todo mundo conecta com todo mundo)
+
+
+## Processadores vetoriais ou Array processors (aula 3)
+
+**Características:**
+
+- Processadores fisicamente próximos e fortemente acoplados
+- tem relógio comum
+- podem não compartilhar memória e podem comunicar por troca de mensagens
+- processamento e troca de dados sincronizados
+- Exemplo: DSP e processamento de imagens
+
+## Diferenças com sistemas paralelos
+
+temos que considerar as latências, e como resolvemos o problema, se é necessário um sistema paralelo ou um sistema distribuído.
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/aula3_03.jpeg)
+
+# Tarefa
+
+Encontre as inconsistências da figura acima com os slides anteriores. Considere os níveis abaixo: analise o que pode ser diferente em cada um deles.
+
+- Programação: memória compartilhada ou troca de mensagens
+- Arquitetura: como é a disposição física dos componentes
+
+### Anotações
+
+Sistemas multiprocessados 
