@@ -11,7 +11,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 
  - [MC921 - Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
  - [Redes de Computadores](https://github.com/NatSatie/StudyNotes/blob/main/redes/Apresentacao.md)
- - Sistemas Operacionais (em breve)
+ - [MC714](https://github.com/NatSatie/StudyNotes/blob/main/mc714/intro.md)
 
 ## Git 🐙
  
