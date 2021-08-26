@@ -8,7 +8,7 @@ A maioria das camadas usam protocolo TCP, e é repassado pelo segmento e temos c
 
 Revisando alguns tópicos de TCP, ele é um protocolo de transferência confiável que é executado na camada de redes fim a fim não confiável (IP).
 
-
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/projeto_parte1/diagram01.jpg)
 
 ## Exercício
 
@@ -26,7 +26,13 @@ Considere a estrutura de um segmento TCP, ver o gerenciamento de conexões.
 - aloca buffers
 - especifica número inicial de sequência
 
-**Passo 3:** sistema cliente recebe SYNACK, 
+**Passo 3:** sistema cliente recebe SYNACK
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/projeto_parte1/diagram02.jpg)
+
+
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/redes/projeto_parte1/diagram03.jpg)
 
 
 
