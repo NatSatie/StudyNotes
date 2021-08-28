@@ -103,3 +103,23 @@ else
 	
 ```
 
+Ao observar a imagem abaixo, temos uma transmissão de dados do processador 0 até o último no processador 7, então para calcular o tempo total no ciclo de `for` temos, 
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/fig13_aula4.png)
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/fig13_aula4_calculo.png)
+
+## Melhorando o modelo
+
+No caso anterior, tínhamos apenas um processador transmitindo os dados, agora podemos melhorar usando paralelismo.
+
+```
+for (s =1; s< 8; s += 2)
+	if (p < s)
+		send(p+s, value)
+	else if (p < 2*s)
+		receive(p-s, &value)
+```
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/mc714/fig14_aula4.png)
+
