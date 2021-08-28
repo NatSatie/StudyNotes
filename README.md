@@ -1,4 +1,5 @@
-﻿﻿# Anotações de aulas📚
+# Anotações de aulas📚
+  
 Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz para o trabalho e para a faculdade.
 
 ## Disciplinas UNICAMP
