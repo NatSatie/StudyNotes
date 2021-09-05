@@ -10,7 +10,7 @@ Por isso, a partir de uma aplicação já pré-pronta ( [Github do projeto Pokem
 
 Ao observar a imagem abaixo, temos uma sequência de barras coloridas que correspondem às componentes que são carregadas no React. 
 
-TODO: add image
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/timeline.png)
 
 As informações do Flaregraph mais importantes estão dentro das barras que consiste em:
 
@@ -35,7 +35,7 @@ O número `6/6` significa que temos seis commits, quando uma componente é rende
 
 Cada barra corresponde ao tempo de demorou cada commit foi feito, normalmente isso acontece em alguns milissegundos.
 
-todo: adicionar gif com cada commit
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/action.gif)
 
 ## Cores do flaregraph
 
