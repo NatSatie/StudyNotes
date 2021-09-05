@@ -45,6 +45,8 @@ Quando o objeto está com **tons de verde** quer dizer que foi renderizado naque
 
 Por isso, quando o objeto está sendo atualizado várias vezes ou demora muito tempo para carregar em um único commit, o objeto é identficado em amarelo. E são essas componentes que devem ser otimizadas.
 
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/profiler.gif)
+
 ## Como otimizar?
 
 Agora que sabemos apontar quais são os problemas de performance da aplicação, podemos pensar em formas de melhorar. 
