@@ -10,7 +10,7 @@ Por isso, a partir de uma aplicação já pré-pronta ( [Github do projeto Pokem
 
 Ao observar a imagem abaixo, temos uma sequência de barras coloridas que correspondem às componentes que são carregadas no React. 
 
-![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/timeline.png)
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/screenoverview.png)
 
 As informações do Flaregraph mais importantes estão dentro das barras que consiste em:
 
@@ -25,11 +25,11 @@ No flaregraph, eu gosto de escolher **uma ação** para analisar. Então para a 
 
 Nesse caso, escolhi procurar o pokemon #123 e faço a busca.
 
-todo: adicionar gif com a ação para gravar
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/action.gif)
 
 Com isso, temos informações importantes para interpretar na barra superior. Especialmente nas setas e no `6/6`.
 
-todo: adicionar imagem com o tempo
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/react/reactprofiler/timeline.png)
 
 O número `6/6` significa que temos seis commits, quando uma componente é renderizada a fase do commit é feita a comparação entre um estado e outro a partir da DOM [1].
 
@@ -52,8 +52,6 @@ Agora que sabemos apontar quais são os problemas de performance da aplicação,
 - Usar hooks como useMemo(), useCallback() [3]
 - Usar memo() [4]
 - Algoritmo de Reconciliação [5] [6]
-
-
 
  ### Referências
 
