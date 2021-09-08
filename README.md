@@ -1,5 +1,5 @@
 # Anotações de aulas📚
-  
+
 Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz para o trabalho e para a faculdade.
 
 ## Disciplinas UNICAMP
@@ -7,6 +7,7 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
  - [MC921 - Projeto e Contrução de Compiladores](https://github.com/NatSatie/StudyNotes/blob/main/compilers/Apresentacao.md)
  - [MC832 - Redes de Computadores](https://github.com/NatSatie/StudyNotes/blob/main/redes/Apresentacao.md)
  - [MC714 - Sistemas Distribuídos](https://github.com/NatSatie/StudyNotes/blob/main/mc714/intro.md)
+ - [USP - Introdução a Processamento de Linguagens Naturais](https://github.com/NatSatie/StudyNotes/blob/main/processamento_linguagens_naturais/intro.md)
 
 ## React.js, RxJS, E2E, Git ⚛️🐙
 
