@@ -22,3 +22,21 @@ Sistema distribuído é um conjunto de computadores independentes que se apresen
 
 ## Escalabilidade
 
+As principais dimensões de escabilidade são tamanho, termos geográficos e administrativos. Um sistema escalável em uma ou mais dimensões frequentemente apresenta perda de desempenho com ampliação.
+
+### Tamanho
+
+Problemas: centralização de serviços, dados e algoritmos, gargalos de processamento, armazenamento e comunicação
+
+Algoritmos centralizados
+
+Algoritmos descentralizados
+
+### Escabilidade Geográfica
+
+Relógio global; 
+
+### Como resolver problemas de Escabilidade?
+
+Ocultar latências co  comunicação assíncrona, distribuição de recursos, replicação de recursos.
+
