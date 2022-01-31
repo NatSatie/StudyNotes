@@ -26,6 +26,8 @@ Esse é um sumário de anotações diversas sobre aulas e tutoriais que já fiz 
 ## SQL: Exercícios do CodeSignal 📊
 
  1. [Fundamentos do SQL](https://github.com/NatSatie/StudyNotes/blob/main/sql/part1.md)
+ 2. [PL SQL parte 1](https://github.com/NatSatie/StudyNotes/blob/main/sql/part2.md)
+
 
 ## Angular 🅰️	
 
