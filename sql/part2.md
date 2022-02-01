@@ -6,6 +6,8 @@
 
 PL/SQL é uma *embedded language*, que significa uma lingaugem que complementa/adiciona flexibilidade para a aplicação. Não confundir com um sistema embarcado, que é um hardware e software construídos dentro de um robô, carro, brinquedo, ou seja, em um sistema embarcado. E PL/SQL é uma linguagem de alta performance com integração a banco de dados.
 
+PL/SQL é um banco de dados da Oracle procedural que se extende ao SQL, que integra ao banco de dados com cobertura de todas as funcionalidades da Oracle.
+
 ## Conhecendo PL/SQL
 
 ```
@@ -53,10 +55,31 @@ END;
 - Crie regras claras para fazer tratamento de exceções
 - Use design top-down para limitar a complexidade dos requisitos que voce vai lidar ao longo do tempo
 
-## Criando e Rodando PL/SQL
+
+# Server-side rendering com PL/SQL
+
+Server-side rendering consiste em aplicações que invocam sub-programas escritos em PL/SQL ou em Java. Você cria um gatilho para o programa armazenado no banco de dados e é retornado uma resposta.
+
+
+## Subprogramas SQL
+
+Um sub-programa é invocado com `CREATE PROCEDURE` ou `CREATE FUNCTION`. Ele é executado em uma aplicação de banco de dados e invoca o subprograma a partir de um gatilho.
+
+![](https://docs.oracle.com/cd/E11882_01/server.112/e40540/img/cncpt073.gif)
+
+
+### Subprogramas são blocks anônimos?
+
+Não.Blocos anônimos não tem nome e são unidades PL/SQL não persistentes. Elas são usadas para:
+
+1. Inicializar chamadas de subprogramas e construct de pacotes
+2. Isolar um handler de exceção
+3. Controlar um trecho de código encadeado/nesting de outros blocos de PL/SQL
 
 
 
 # Referências
 
-[1](https://www.pcmag.com/encyclopedia/term/embedded-language)
+[1 embedded-language](https://www.pcmag.com/encyclopedia/term/embedded-language)
+
+[2: Server Side rendering](https://docs.oracle.com/cd/E11882_01/server.112/e40540/srvrside.htm#CNCPT1767)
