@@ -114,6 +114,8 @@ for(Reajuste r: reajustes){
 }
  ```
  
- Nesse caso estamos fazendo uma chamda 
+ Nesse caso estamos fazendo uma chamada de getReajustes() mas ao mudar a chamada, temos que alterar a lista e o ciclo de for, então o código está muito acoplado à classe Funcionario.
+ 
+Uma situação comum, é alterar em uma classe A e tem que modificar a classe B e assim vai.
 
 
