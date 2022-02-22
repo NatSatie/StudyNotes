@@ -48,9 +48,57 @@ BEGIN
 END;
 ```
 
+## Testes com PLSQL: Escrevendo testes
 
+
+### Em um arquivo de testes 
+
+Não é necessário a criação de uma chamada de EXEC ou CALL. 
 
 ```
-sad
+BEGIN
+   myfunction();
+END;
 ```
 
+Em caso de procedures com parametros:
+
+```
+DECLARE
+  sabor varchar2(50);
+
+BEGIN
+  sabor := 'CHOCOLATE';
+  insertSorvete(sabor);
+END;
+```
+### Considere a inserção de valores em uma tabela de sorveteria
+
+Procedure
+ 
+```
+create or replace procedure insertSorvete(pid in out number, psabor in out varchar2) is
+begin
+  insert into sorveteria (id, sabor) values (pid, psabor);
+  commit;
+end insertSorvete;
+```
+
+Arquivo de teste
+```
+DECLARE
+  id number;
+  sabor varchar2(50);
+
+BEGIN
+  id := 3;
+  sabor := 'napolitano';
+  insertSorvete(id, sabor);
+END;
+```
+
+Para conferir se está inserido:
+
+```
+select * from sorveteria
+```
