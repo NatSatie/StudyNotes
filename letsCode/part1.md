@@ -46,3 +46,10 @@ Inicializar o projeto com [Spring Initializr](https://start.spring.io/) e extrai
 Vamos commitar o conteúdo usando o Github Desktop.
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/githubDesktop1.gif)
+
+Legal! o nosso projeto está salvo no repositório. 
+
+### Configurando o Docker
+
+### Indo para o IntelliJ
+
