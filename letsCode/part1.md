@@ -51,5 +51,56 @@ Legal! o nosso projeto está salvo no repositório.
 
 ### Configurando o Docker
 
+Ao abrir o windows terminal vamos puxar a imagem do docker com o comando `docker pull postgres`, dessa forma baixamos a imagem do container do postgres.
+
+Uma vez a imagem baixada vamos criar um container que vamos chamar `my-postgres-container` seguindo o comando `docker run --name my-postgres-container -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres`.
+
+**Caso aconteça essa mensagem aqui**, certifique-se que seu docker está ligado.
+
+```
+docker: error during connect: This error may indicate that the docker daemon is not running.: Post "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/create?name=my-postgres-container": open //./pipe/docker_engine: O sistema não pode encontrar o arquivo especificado.
+See 'docker run --help'.
+```
+
+Ao criar a imagem, certifique-se que está certinho com `docker ps -a` apra ver se está ativo.
+
+Execute os comandos abaixo, linha por linha, vamos usar a partir do tutorial de cirar um usuario (https://ubiq.co/database-blog/create-user-postgresql/)
+
+```
+docker exec -it my-postgres-container /bin/sh
+su - postgres
+createuser --interactive --pwprompt
+// comentario: criar usuario e por uma senha e concordar que eh um superuser
+```
+
+```
+docker exec -it my-postgres-container /bin/sh
+su - postgres
+createdb mydb
+```
+
+### nota de problemas recorrentes
+
+ao criar o docker, pode aparecer um erro fatal, que não podemos encontrar o database, a melhor solução que achei foi trocar a porta 5432 por 5416 por exemplo. Não precisa ser necessariamente esse valor, pode ser um outro desde que não seja uma porta reservada do localhost.
+
+### pgAdmin
+
+Vamos abrir o pgAdmin para configurar algumas coisas antes de criar nosso banco.
+
+
+
+
+
 ### Indo para o IntelliJ
 
+Vamos editar o arquivo `src/main/resources/application.properties` e colocar
+
+```
+spring.datasource.url= jdbc:postgresql://localhost:5432/public
+spring.datasource.username= postgres
+spring.datasource.password= 123
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto= update
+```
