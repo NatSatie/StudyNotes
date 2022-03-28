@@ -165,9 +165,25 @@ public class Anime {
 
 ### Controller e Repository
 
-Vamos criar o consoller e o repository juntos, nesse caso vamos anotar algumas tags importantes.
+Ver o repositório de referência.
 
-@Autowired
+### E se minha porta 8080 não funcionar?
+
+Use esse tutorial aqui: https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows
+
 
 ### Rodando no IntelliJ
 
+Faça as configurações como mostra a imagem abaixo
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/setupMavenRun.png)
+
+E aperte play.
+
+## Postman
+
+Postman serve para testar se esta conseguindo manipular o banco.
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/postman_post.png)
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/postman_get.png)
