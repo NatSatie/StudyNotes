@@ -53,7 +53,7 @@ Legal! o nosso projeto está salvo no repositório.
 
 Ao abrir o windows terminal vamos puxar a imagem do docker com o comando `docker pull postgres`, dessa forma baixamos a imagem do container do postgres.
 
-Uma vez a imagem baixada vamos criar um container que vamos chamar `my-postgres-container` seguindo o comando `docker run --name my-postgres-container -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres`.
+Uma vez a imagem baixada vamos criar um container que vamos chamar `my-postgres-container` seguindo o comando `docker run --name my-postgres-container -e POSTGRES_PASSWORD=postgres -d -p 5416:5432 postgres`.
 
 **Caso aconteça essa mensagem aqui**, certifique-se que seu docker está ligado.
 
@@ -62,33 +62,26 @@ docker: error during connect: This error may indicate that the docker daemon is 
 See 'docker run --help'.
 ```
 
-Ao criar a imagem, certifique-se que está certinho com `docker ps -a` apra ver se está ativo.
+Ao criar a imagem, certifique-se que está certinho com `docker ps -a` para ver se está ativo.
 
-Execute os comandos abaixo, linha por linha, vamos usar a partir do tutorial de cirar um usuario (https://ubiq.co/database-blog/create-user-postgresql/)
-
-```
-docker exec -it my-postgres-container /bin/sh
-su - postgres
-createuser --interactive --pwprompt
-// comentario: criar usuario e por uma senha e concordar que eh um superuser
-```
 
 ```
 docker exec -it my-postgres-container /bin/sh
-su - postgres
-createdb mydb
 ```
 
 ### nota de problemas recorrentes
 
-ao criar o docker, pode aparecer um erro fatal, que não podemos encontrar o database, a melhor solução que achei foi trocar a porta 5432 por 5416 por exemplo. Não precisa ser necessariamente esse valor, pode ser um outro desde que não seja uma porta reservada do localhost.
+Ao criar o docker, pode aparecer um erro fatal, que não podemos encontrar o database, a melhor solução que achei foi trocar a porta 5432 por 5416 por exemplo. Não precisa ser necessariamente esse valor, pode ser um outro desde que não seja uma porta reservada do localhost.
 
-### pgAdmin
+```
+FATAL: password authentication failed for user "postgres"
+```
 
-Vamos abrir o pgAdmin para configurar algumas coisas antes de criar nosso banco.
+### DBeaver
 
+Crie uma nova conexão no DBeaver com a configuração do Postgres. 
 
-
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/dbeaver.gif)
 
 
 ### Indo para o IntelliJ
@@ -96,11 +89,85 @@ Vamos abrir o pgAdmin para configurar algumas coisas antes de criar nosso banco.
 Vamos editar o arquivo `src/main/resources/application.properties` e colocar
 
 ```
-spring.datasource.url= jdbc:postgresql://localhost:5432/public
+spring.datasource.url= jdbc:postgresql://localhost:5416/postgres
 spring.datasource.username= postgres
-spring.datasource.password= 123
+spring.datasource.password= postgres
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
 # Hibernate ddl auto (create, create-drop, validate, update)
 spring.jpa.hibernate.ddl-auto= update
 ```
+
+Com tudo configurado vamos começar a codar nosso problema
+
+# Criando os objetos em Java
+
+## Estrutura inicial: Model-view-controller (MVC) design pattern
+
+Antes de começarmos a codificar nosso problema, vamos decompor em como é organizado o tutorial que estou seguindo.
+
+Ele segue o design pattern [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), no qual temos uma representação para visualizar nosso dado, um controlador que manipula o dado e um atualizador do dado.
+
+![](https://upload.wikimedia.org/wikipedia/commons/a/a0/MVC-Process.svg)
+
+Podemos considerar que `model` é a representação do nosso dado, `controller` vai manipular esse dado com adição, remoção e alteração (o básico do CRUD - create, read, update, delete) e `repository` será nossa forma de visualizarmos o dado como um todo.
+
+O problema que vamos resolver são a lista de animes/mangás que tenho interesse. Vamos ter uma tabela de `anime`, no qual teremos as seguintes colunas e tipos:
+
+- id: long
+- name: String
+- year: String
+- genre: String
+
+### Criando o Modelo
+
+De referência, observe [esse link](https://github1s.com/NatSatie/spring-boot-jpa-postgresql/blob/master/src/main/java/com/bezkoder/spring/jpa/postgresql/controller/TutorialController.java). Teremos um pacote chamado `model` que terá o `anime.java`.
+
+Ao analisar linha a linha, vamos colocar o pacote `javax.persistence.*`, que é um pacote de faz o gerenciamento e persistência de objetos na API. Vamos usar a tag `@Entity` que avisa a API que a classe é uma entidade no modelo relacional (quando dizemos modelo relacional é a modelagem do banco de dados que estamos implementando).
+
+Com lokbok, podemos evitar a escrita de código desnecessário então temos
+
+```
+package com.example.postgesqlherokutest.model;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@Table(name="animes")
+public class Anime {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
+    @Column(name="name")
+    private String name;
+
+    @Column(name="year")
+    private String year;
+
+    @Column(name="genre")
+    private String genre;
+
+    public Anime(String name, String year, String genre) {
+        this.name = name;
+        this.year = year;
+        this.genre = genre;
+    }
+}
+```
+
+### Controller e Repository
+
+Vamos criar o consoller e o repository juntos, nesse caso vamos anotar algumas tags importantes.
+
+@Autowired
+
+### Rodando no IntelliJ
+
