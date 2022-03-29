@@ -14,22 +14,18 @@ Segue o nosso roadmap
 1. Instalação das ferramentas (Windows) 
    - Docker Desktop
    - DBeaver
+   - Postgres
    - Postman
    - Intellij IDEA
-   - Git Bash e Windows Terminal
+   - Git Bash ou Windows Terminal
    - Github Desktop
-   - Java (11)
+   - Java 11
    - Postgres (versão atualizada)
-   - Heroku
 2. Criando o seu projeto
 3. Modelar o sistema
 4. Gerando o docker e rodar localmente
 5. Seu projeto no Github
 6. Subir a aplicação no Heroku
-
-# Instalação
-
-// a fazer
 
 # Criando o Projeto
 
@@ -187,3 +183,31 @@ Postman serve para testar se esta conseguindo manipular o banco.
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/postman_post.png)
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/postman_get.png)
+
+# Colocar no Heroku
+
+Para postar no Heroku precisamos criar um aplicativo 
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/clickNewHeroku.png)
+
+![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/createAppHeroku.png)
+
+Uma vez criado, vamos associar aplicativo em `Settings > Buildpacks` e adicionar o buildpack `heroku/java`.
+
+Em `Resources > Add-ons` e adicionar o um add-on free-tier `Heroku Postgres` para termos nosso banco de dados.
+
+Finalmente em `Deploy` associe a conta Github com o nome do projeto correspondente.
+
+Para que tudo funcione, adione mais uma modificação em seu projeto, mude `pom.xml` do projeto e remova a seguinte linha:
+
+```
+<properties>
+    <java.version>11</java.version>
+</properties>
+```
+
+Por que? Isso é uma issue de problema de construção do buildpack, voce pode ver onde encontrei a issue [aqui](https://stackoverflow.com/questions/60662711/heroku-unable-to-detect-java-11) e [aqui](https://help.heroku.com/1MC2J0GF/why-does-my-app-fail-to-detect-a-buildpack).
+
+Faça um teste no Postman agora e tente dazer um POST ou GET no domínio que vc colocou a aplicação. Verifique o domínio em `Open app`, assim como tinha feito anteriormente, mas sem o localhost.
+
+![](https://c.tenor.com/s6O8BIDWYT4AAAAC/good-job-lucky-star.gif)
