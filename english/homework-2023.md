@@ -40,7 +40,16 @@ For the word APPLE (/ˈæp.əl/), there's two syllables. The second syllable is 
 
 ### 2. How to predict the primary stress in certain situations
 
+1. Tips to identify: add a -ify suffix, such as availabily (available a-VAI-la-ble to a-vai-LA-bi-lity).
+The stress sound moves forward from the original word.
+
+2. for two syllable there's the first syllable.
+
+3. verb: last syllable; noun: first syllable. pre-SENT and PRE-sent
+
 ### 3. 3-step system for practising the primary stress in english
+
+Compare word in the dictionary, theres a aphostrafe before the primary stress.
 
 ### 4. Quiz!
 
